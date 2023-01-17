@@ -7,10 +7,10 @@ RUN \
   apt-get autoclean && \
   apt-get autoremove && \
   rm -rf /var/lib/apt/lists/*
-
+RUN wget -O /kvm/Porteus-CINNAMON-v5.0-x86_64.iso http://ftp.vim.org/ftp/os/Linux/distr/porteus/x86_64/Porteus-v5.0/Porteus-CINNAMON-v5.0-x86_64.iso
 ADD runvm.sh /
 
-ENV OS_ISO=/kvm/cn_windows_10_multiple_editions_x64_dvd_6848463.iso
+ENV OS_ISO=/kvm/Porteus-CINNAMON-v5.0-x86_64.iso
 ENV DRV_ISO=/kvm/drv.iso
 ENV RAM=6144
 ENV SMP=1
@@ -32,6 +32,7 @@ ENV TELNET='127.0.0.1:55555'
 ENV DNS_SERVERS=114.114.114.114
 ENV EXT_DEVICES=
 
+RUN chmod 755 runvm.sh
 VOLUME /data
 
 ENTRYPOINT ["/runvm.sh"]
