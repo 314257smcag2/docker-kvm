@@ -1,5 +1,5 @@
-FROM ubuntu:18.04
-LABEL MAINTAINER="xhzhang zzz332191120@gmail.com"
+FROM ubuntu:20.04
+LABEL MAINTAINER=shakugan
 
 RUN \
   apt-get update && \
