@@ -3,7 +3,7 @@ LABEL MAINTAINER=shakugan
 
 RUN \
   apt-get update && \
-  apt-get install -y qemu-kvm qemu-utils telnet iptables bridge-utils iproute2 iputils-ping dnsmasq net-tools && \
+  apt-get install -y wget curl nano qemu-kvm qemu-utils telnet iptables bridge-utils iproute2 iputils-ping dnsmasq net-tools && \
   apt-get autoclean && \
   apt-get autoremove && \
   rm -rf /var/lib/apt/lists/*
