@@ -7,6 +7,9 @@ RUN \
   apt-get autoclean && \
   apt-get autoremove && \
   rm -rf /var/lib/apt/lists/*
+  
+
+RUN mkdir -p /kvm
 RUN wget -O /kvm/Porteus-CINNAMON-v5.0-x86_64.iso http://ftp.vim.org/ftp/os/Linux/distr/porteus/x86_64/Porteus-v5.0/Porteus-CINNAMON-v5.0-x86_64.iso
 ADD runvm.sh /
 
